@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+.title {
+	font-weight: bolder;
+}
+
+.link {
+	text-decoration: underline;
+}
