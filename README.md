@@ -15,8 +15,6 @@ Implemented:
 
 The Wicket Web Application class is a spring bean triggering the spring boot configuration and start up by using the @EnableAutoConfiguration annotation and providing the main class.
 
-The main class builds the spring context and activates wicket's SpringComponentInjector to make spring beans available to all wicket components.
-
 ###WebInitializer
 
 This class replaces the web.xml by using spring boot's ServletContextInitializer that is found and executed automatically on startup.

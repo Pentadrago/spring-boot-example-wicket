@@ -26,4 +26,8 @@ dependencies {
 		"org.springframework:spring-web:4.0.3.RELEASE",
 		"org.apache.wicket:wicket-spring:6.15.0",
 		)
+		
+	testCompile(
+		"org.springframework.boot:spring-boot-starter-test",
+	)
 }

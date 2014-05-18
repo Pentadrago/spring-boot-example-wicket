@@ -15,16 +15,18 @@ import spring.boot.example.wicket.services.TextService;
  * sample page to show mounting and spring integration
  * 
  * @author kloe
- *
+ * 
  */
 public class MountedPage extends WebPage {
 
+	/* spring integration the wicket way */
 	@SpringBean
 	private TextService exampleService;
 
 	public MountedPage() {
 		add(new Label("title", "this is a mounted page"));
 		add(new BookmarkablePageLink<String>("link", Homepage.class));
+		/* showcase spring integration in wicket component */
 		add(new Label("serviceText", exampleService.getText()));
 	}
 
