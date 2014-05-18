@@ -9,6 +9,12 @@ import org.apache.wicket.request.resource.CssResourceReference;
 
 import spring.boot.example.wicket.WicketWebApplication;
 
+/**
+ * sample homepage
+ * 
+ * @author kloe
+ *
+ */
 public class Homepage extends WebPage {
 
 	public Homepage() {

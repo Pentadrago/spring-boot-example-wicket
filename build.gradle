@@ -21,17 +21,9 @@ repositories {
 dependencies {
 	compile(
 		"org.springframework.boot:spring-boot-starter",
-		"org.springframework.boot:spring-boot-starter-tomcat",
 		"org.springframework.boot:spring-boot-starter-logging",
+		"org.springframework.boot:spring-boot-starter-tomcat",
 		"org.springframework:spring-web:4.0.3.RELEASE",
 		"org.apache.wicket:wicket-spring:6.15.0",
 		)
-		
-    testCompile(
-    	"org.springframework.boot:spring-boot-starter-test"
-    )
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '1.12'
 }

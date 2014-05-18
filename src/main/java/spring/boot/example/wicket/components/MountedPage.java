@@ -6,14 +6,26 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.request.resource.CssResourceReference;
+import org.apache.wicket.spring.injection.annot.SpringBean;
 
 import spring.boot.example.wicket.WicketWebApplication;
+import spring.boot.example.wicket.services.TextService;
 
+/**
+ * sample page to show mounting and spring integration
+ * 
+ * @author kloe
+ *
+ */
 public class MountedPage extends WebPage {
+
+	@SpringBean
+	private TextService exampleService;
 
 	public MountedPage() {
 		add(new Label("title", "this is a mounted page"));
 		add(new BookmarkablePageLink<String>("link", Homepage.class));
+		add(new Label("serviceText", exampleService.getText()));
 	}
 
 	@Override
