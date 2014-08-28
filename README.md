@@ -1,13 +1,16 @@
+**Update:** Now building a war archive containing a webapp directory.
+
 spring-boot-example-wicket
 ==========================
 
 This project builds and runs a minimal wicket web application.
 
 Implemented:
-* fat jar starting a tomcat server
+* fat war starting a tomcat server
 * wicket web application as spring boot starting point
 * using ServletContextInitializer instead of web.xml
 * spring wiring into wicket web pages
+* SpringBootServletInitializer used for optional deployment on application server
 
 ##Notable classes
 
@@ -39,3 +42,10 @@ It's code is equivalent to the following web.xml part:
 	<url-pattern>/*</url-pattern>
 </filter-mapping>
 ```
+###WarInitializer
+
+This class is used when being deployed on an application server. In this scontext it has the functionality of the Application's main method. 
+
+## Running / Deployment
+
+Building the project provides two war archives. One is a fully featured spring boot runnable war, the other having the suffix original is a standard war archive ans can be deployed directly on an application server.
