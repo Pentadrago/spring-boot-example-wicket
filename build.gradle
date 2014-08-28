@@ -3,14 +3,14 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.2.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.5.RELEASE")
     }
 }
 
-apply plugin: 'java'
 apply plugin: 'spring-boot'
+apply plugin: 'war'
 
-jar {
+war {
     version =  '0.0.1'
 }
 
@@ -19,15 +19,18 @@ repositories {
 }
 
 dependencies {
-	compile(
-		"org.springframework.boot:spring-boot-starter",
-		"org.springframework.boot:spring-boot-starter-logging",
-		"org.springframework.boot:spring-boot-starter-tomcat",
-		"org.springframework:spring-web:4.0.3.RELEASE",
-		"org.apache.wicket:wicket-spring:6.15.0",
-		)
+    compile(
+	"org.springframework.boot:spring-boot-starter",
+	"org.springframework.boot:spring-boot-starter-logging",
+	"org.springframework:spring-web:4.0.6.RELEASE",
+	"org.apache.wicket:wicket-spring:6.16.0",
+    )
+                
+    providedCompile (
+        "org.springframework.boot:spring-boot-starter-tomcat",
+    )
 		
-	testCompile(
-		"org.springframework.boot:spring-boot-starter-test",
-	)
+    testCompile(
+	"org.springframework.boot:spring-boot-starter-test",
+    )
 }
