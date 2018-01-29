@@ -12,13 +12,13 @@ Implemented:
 * spring wiring into wicket web pages
 * SpringBootServletInitializer used for optional deployment on application server
 
-##Notable classes
+## Notable classes
 
-###WicketWebApplication
+### WicketWebApplication
 
 The Wicket Web Application class is a spring bean triggering the spring boot configuration and start up by using the @EnableAutoConfiguration annotation and providing the main class.
 
-###WebInitializer
+### WebInitializer
 
 This class replaces the web.xml by using spring boot's ServletContextInitializer that is found and executed automatically on startup.
 
@@ -42,7 +42,7 @@ It's code is equivalent to the following web.xml part:
 	<url-pattern>/*</url-pattern>
 </filter-mapping>
 ```
-###WarInitializer
+### WarInitializer
 
 This class is used when being deployed on an application server. In this scontext it has the functionality of the Application's main method. 
 
